@@ -37,5 +37,10 @@ local a = Dog()
 print ('going to build a Cat\n\n')
 local b = Cat()
 
+a:base ()
+b:base ()
+
 local c = Animal ()
 d = c + c
+
+c:base ()
