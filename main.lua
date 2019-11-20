@@ -43,4 +43,11 @@ b:base ()
 local c = Animal ()
 d = c + c
 
+print (c.info)
+
+-- the next line will throw an exception as type Animal (which c is) attribute info is a Number
+-- c.info = {}
+-- the next line will throw an exception as type Animal (which c is) does not have an attribute test
+-- c.test = 4
+
 c:base ()
