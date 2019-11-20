@@ -21,11 +21,12 @@ local class = {
 
       class:attributes ( ... )
 
-      Where attributes are a list of tables, { name = className ([default_value]) }
+      Where attributes are a list of tables, { name = className () }
          name is the attribute name
-         type is the attribute type, func - function, number - number, string - string, table - table
-         default_value is the default setting (optional, otherwise defaults to nil)
-         class:static () forces the value imutable once it is set
+         className is the attribute type, Function - function, Number - number, String - string, Table - table,
+         or an already created class.
+   
+      The attributes are type tested and stored in an objects metatable - the metatable is the class type itself.
 
       ============================================================================
       ]],
@@ -492,17 +493,6 @@ function class:newClass (base, init)
    -- se the classBuildingBlocks up for next class
    classBuildingBlocks = nil
 
-   -- will do paramter cheking later
-   --[[
-   c.__newindex = function (t, k, v) 
-                     if type (v) ~= types.func then
-                        rawset( t, k, v )
-                     else
-                        local get = rawget( t, k )
-                        print (get, v)
-                     end
-                  end
-]]
    classLogger ('attempt to create new class - end')
 
    return c
