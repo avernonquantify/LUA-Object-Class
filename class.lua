@@ -372,7 +372,7 @@ function class:overload (name, func)
       for x = 1, #overloadOperators do
          local test = overloadOperators [x]
          if test.v == name then
-            classLogger ('attempt to overload method ', name)
+            classLogger ('attempt to overload operator ', name)
             buildingBlockBuilder (types.special, func, test.r, true)
             overloaded = true
             break
