@@ -8,7 +8,8 @@ local class = {
       usage Classname = class:newClass (
                            class:attributes ( ... ),
                            class:initMethod ( func ),
-                           class:addMethod ( name, func ) or class:addPrivateMethod ( name, func ) ......
+                           class:addMethod ( name, func ) or class:addPrivateMethod ( name, func ) ......,
+                           class:overload (operator, func)
                         )
       class:initMethod ( func ) -- adds the class init method, only can have one per class
       class:addMethod ( name, func) adds a method to that class of name. 
@@ -28,6 +29,11 @@ local class = {
    
       The attributes are type tested and stored in an objects metatable - the metatable is the class type itself.
 
+      class:overload (operator, func)
+   
+      overloads operator with function func for that class. Format of func should be
+         function (obja, objb) ... ACTIONS ON obja, objb ... return RUSULT OF ACTIONS end
+   
       ============================================================================
       ]],
      _LICENSE = [[
