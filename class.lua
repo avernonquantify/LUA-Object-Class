@@ -501,7 +501,7 @@ function class:newClass (base, init)
 
 end
 
--- base classes, these return a true for a value b then bT is the LUA type
+-- base classes, these return a true for a value _isABaseType then bT is the LUA type
 _G.String = function ( )
                return {_isABaseType = true, bT = types.string}
             end
