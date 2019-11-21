@@ -1,6 +1,6 @@
 local class = {
    _VERSION = 'class.lua 1.0.0',
-     _URL = '',
+     _URL = 'https://github.com/davporte/LUA-Object-Class/',
      _DESCRIPTION = [[
       ============================================================================
       class_creator is an object creates a sudo class using metatables
