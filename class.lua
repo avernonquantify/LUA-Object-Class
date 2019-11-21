@@ -208,7 +208,7 @@ local function newAttributeSet (t, k, c, v)
          else
             error ('attribute ' .. k .. ' incorrect base type, expected ' .. c._attributes [k] .. ' not ' .. type ( v ), 3)
          end
-      elseif c._attributes [k] == getmetatable ( v ) then
+      elseif v == nil or c._attributes [k] == getmetatable ( v ) then
          storeAttribute (t, k, c, v)
       else
          error ('attribute ' .. k .. ' incorrect class type', 3)
