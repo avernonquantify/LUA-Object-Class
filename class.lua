@@ -32,7 +32,7 @@ local class = {
       class:overload (operator, func)
    
       overloads operator with function func for that class. Format of func should be
-         function (obja, objb) ... ACTIONS ON obja, objb ... return RUSULT OF ACTIONS end
+         function (obja, objb) ... ACTIONS ON obja, objb ... return RESULT OF ACTIONS end
    
       ============================================================================
       ]],
