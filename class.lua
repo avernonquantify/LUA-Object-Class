@@ -400,10 +400,6 @@ function class:newClass (base, init)
       init = base
       base = nil
    elseif type (base) == types.table then -- this inherets from a another class
-      -- our new class is a shallow copy of the base class!
-      --for i,v in pairs(base) do
-      --   c[i] = v
-      --end
       c._base = base
    end
 
