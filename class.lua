@@ -439,7 +439,7 @@ function class:newClass (base, init)
                      newAttributeSet (t, k , c, v)
                   end
 
-   -- expose a constructor which can be called by <classname>(<args>)
+   -- a constructor which can be called by className( arguments )
    local mt = {}
 
    mt.__call = function (class_tbl, ...) return getNewObject (class_tbl, c, ...) end
